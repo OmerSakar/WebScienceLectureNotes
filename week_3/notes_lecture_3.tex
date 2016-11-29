@@ -84,7 +84,55 @@ $E_{i} = \{blue\}\ or\ \{red\}\ -\ what\ person\ i\ saw$
 
 \noindent Thus $P(B | blue, blue) = \frac{\frac{1}{2}\cdot (\frac{2}{3})^{2}}{\frac{5}{18}} = \frac{4}{5} > \frac{1}{2}$
 
-\noindent Conclusion: If $D_{1} = \{blue\}$ and $E_{2} = \{blue\} \implies D_{2} = \{blue \}$
+\noindent Conclusion: If $D_{1} = \{blue\}$ and $E_{2} = \{blue\} \implies D_{2} = \{blue \}$\newline
+
+\noindent $P(R) = P(B) = \frac{1}{2}$\\
+$P(B | blue, red) = \frac{P(B)\cdot P(blue, red | B)}{P(blue, red)} = \frac{\frac{1}{2}\cdot \frac{2}{3}\cdot \frac{1}{2}}{ \frac{1}{2}\cdot \frac{2}{3}\cdot \frac{1}{2} + \frac{1}{2}\cdot \frac{2}{3}\cdot \frac{1}{2}} = \frac{1}{2}$\\
+$D_{1} = \{blue\}, E_{2} = \{red\} \implies D_{2} = \{red\}$
+If your opinions differ then
+
+
+
+
+\noindent$P(B cascade| R) = \frac{1}{3}\cdot \frac{1}{3} + (\frac{1}{3}\cdot \frac{2}{3})\cdot 2\cdot \frac{1}{3}\cdot \frac{1}{3} + 
+(\frac{1}{3}\cdot \frac{2}{3}\cdot 2)^{2}\cdot \frac{1}{3}\cdot \frac{1}{3} + \cdots
+= \frac{1}{9}\cdot \frac{1}{1 - \frac{4}{9}} = \frac{1}{5} \equiv 20\%$
+\subsection{Genral Cascade Model}
+Example: Adopting a product\newline
+1) Let B be bad and G be good. We estimate $P(B) = 1-p$ and $P(G) = p$.\newline
+2) And let $v_{g}$ be if we guess G right and $v_{b}$ if we guess B right.\newline
+$v_{g}\cdot p + v_{b}\cdot (1-p) = 0$ - Expected Reward. Rewritten it looks like $v_{b} + (v_{g} - v_{b})\cdot p$.\newline
+It is accepted if $P(G|signal) > p$ and rejected if $P(G | signal) < p$.
+
+\noindent 3) low(L) and high(H)
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+  & B   & G   \\\hline
+L & q   & 1-q \\\hline
+H & 1-q & q  \\\hline
+\end{tabular}
+\caption{With q $> \frac{1}{2}$}
+\label{my-label}
+\end{table}
+
+\noindent $P(L|B) = q > \frac{1}{2},\ P(H|B) = 1-q$. $P(L|G) = 1-q,\ P(H|G) = q > \frac{1}{2}$.\newline
+
+\noindent First person $P(G|H) = \frac{P(H|G)\cdot P(G)}{P(H)} = \frac{p\cdot q}{p\cdot q + (1-p)\cdot (1-q)} > \frac{p\cdot q}{p\cdot q + (1-p)\cdot q} = \frac{p\cdot q}{q} = p$\newline
+Thus $E_{1} = \{H\}\implies D_{1} = \{G\}$\newline
+
+\noindent Let $a+b$ - person and $S$ - signal a times H and b times L.
+
+\noindent $P(G|S) = \frac{P(S|G)\cdot P(G)}{P(S)} = \frac{p\cdot q^{a}\cdot (1-q)^{b}}{p\cdot q^{a}\cdot (1-q)^{b} + (1-p)\cdot (1-q)^{a}\cdot q^{b}} > \frac{p\cdot q^{a}\cdot (1-q)^{b}}{p\cdot q^{a}\cdot (1-q)^{b} + (1-p)\cdot q^{a}\cdot (1-q)^{b}} = p$
+
+\noindent This is when $a < b \iff (1-q)^{a}\cdot q^{b} > q^{a}\cdot (1-q)^{b}$ (because $q>1-q$). 
+
+\noindent Thus when $a < b, D = \{B\}$
+
+\noindent If $a > b \iff (1-q)^{a}\cdot q^{b} < q^{a}\cdot (1-q)^{b}$ . This would result in $P(G|S) > p \implies D = \{G\}$
+
+//TODO insert picture of graph
 
 \newpage
 \section{Lecture 2} 
