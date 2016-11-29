@@ -1,0 +1,116 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage{amsthm}
+\usepackage{ocgx}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{Lecture Notes week 3}
+\author{\"Omer \c Sakar}
+\date{\today}
+
+\newtheorem{defi}{Definition}
+\newtheorem{theo}{Theorem}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Chapter 16}
+
+\subsection{Question 1}
+In this problem we will ask whether an information cascade can occur if each individual
+sees only the action of his immediate neighbor rather than the actions of all those who
+have chosen previously. Let’s keep the same setup as in the Information Cascades
+chapter, except than when individual i chooses he observes only his own signal and the
+action of individual i − 1.
+\subsubsection*{a}
+Question: Briefly explain why the decision problems faced by individuals 1 and 2 are unchanged by this modification to the information network.\\ \\
+Answer: In the case of 1, it cannot look back because there are no nodes to look back at and in the case of 2, you can only look back one individual. Thus the situation for 1 and 2 are not changed.
+
+\subsubsection*{b}
+Question: Individual 3 observes the action of individual 2, but not the action of individual 1. What can 3 infer about 2’s signal from 2’s action?\\\\
+Answer: Two will always say what they see. If $D_{1} = \{blue\}$ and $E_{2} = \{blue\}$, they say blue. If $E_{2} = \{red\}$, there is a difference in their oppinion and individual two says what they saw.
+
+
+\subsubsection*{c}
+Question: Can 3 infer anything about 1’s signal from 2’s action? Explain.\\\\
+Answer: No, because 2 will always say what they saw. 2's choice is independent of 1's statement.
+
+\subsubsection*{d}
+Question: What should 3 do if he observes a high signal and he knows that 2 Accepted?
+What if 3’s signal was low and 2 Accepted?\\\\
+Answer: Every node after 1 just says what they see.
+
+
+\subsubsection*{e}
+Question: Do you think that a cascade can form in this world? Explain why or why not. A
+formal proof is not necessary, a brief argument is sufficient.\\\\
+Answer: Because everyone says what they saw, it is not possible to from a cascade.
+
+
+\subsection{Question 3}
+In this problem we will consider the information cascades model from Chapter 16 with
+specific values for the probabilities. Let’s suppose that the probability that Accept is
+a good idea is p = 1/2; and the probability of a High signal if Good is true (as well as
+the probability of a Low signal if Bad is true) is q = 3/4. Finally, let’s assume that
+Good is actually true.
+
+\subsubsection*{a}
+Question: What is the probability that the first person to decide will choose Accept; what’s the probability that this person will choose Reject?\\\\
+Answer: $P(A) = P(R) =  \frac{1}{2}$, with $A$ is accept and $R$ is reject.
+
+Answer: $P(A) = P(H) = P(H|G) = \frac{3}{4}$. $P(H) = P(H|G)$ holds because $P(G) = 1$ and we have $P(H|G)$.
+
+
+\subsubsection*{b}
+Question: What is the probability of observing each of the four possible pairs of choices by the first two people: (A,A), (A,R), (R,A), and (R,R)? [A pair of choices such as (A,R) means that the first person chose Accept and second person chose Reject.]\\\\
+Answer: 
+
+\begin{itemize}
+\item $(A,A) \rightarrow P(A)\cdot P(A|A) = \frac{3}{4}\cdot \frac{3}{4} = \frac{9}{16}$
+\item $(A,R) \rightarrow P(A)\cdot P(R|A) = \frac{3}{4}\cdot \frac{1}{4} = \frac{3}{16}$
+\item $(R,A) \rightarrow P(R)\cdot P(A|R) = \frac{3}{4}\cdot \frac{1}{4} = \frac{3}{16}$
+\item $(R,R) \rightarrow P(R)\cdot P(R|R) = \frac{1}{4}\cdot \frac{1}{4} = \frac{1}{16}$
+\end{itemize}
+2
+\subsubsection*{c}
+NOT FINISHED
+Question: What is the probability of an Accept or a Reject cascade emerging with the decision by the third person to choose? Explain why a cascade emerges with this probability.\\\\
+Answer: The chance that after the second a cascade can occur is $\frac{1}{2}$, because there are two cases where the previous two are the same ($P(A|A) = P(R|R) = \frac{3}{8}$).  
+
+\section{Chapter 17}
+\subsection*{Question 1}
+Consider a product that has network effects in the sense of our model from Chapter 17.
+Consumers are named using real numbers between 0 and 1; the reservation price for
+consumer x when a z fraction of the popuation uses the product is given by the formula
+r(x)f(z), where r(x) = 1 − x and f(z) = z.
+\subsubsection*{a}
+Question: Let’s suppose that this good is sold at cost 1/4 to any consumer who wants to
+buy a unit. What are the possible equilibrium number of purchasers of the good?\\\\
+Answer: $p^{*} = r(z)\cdot f(z) = (1-z)\cdot z = \frac{1}{4}$. This holds for $z = \frac{1}{2}$. Equilibrium is instable (plot $(1-z)\cdot z$ and think about it).
+
+\subsubsection*{b}
+Question: Suppose that the cost falls to 2/9 and that the good is sold at this cost to any consumer who wants to buy a unit. What are the possible equilibrium number of
+purchasers of the good?\\\\
+Answer: $p^{*} = r(z)\cdot f(z) = (1-z)\cdot z = \frac{2}{9}$. This holds for $z = \frac{2}{3} and z = \frac{1}{3}$. 
+
+\subsubsection*{c} 
+Question: Briefly explain why the answers to parts (a) and (b) are qualitatively different.\\\\
+Answer: 
+
+\subsubsection*{d}
+Question: Which of the equilibria you found in parts (a) and (b) are stable? Explain your answer.\\\\
+Answer: 
+
+
+\end{document}
+
+
+
+
