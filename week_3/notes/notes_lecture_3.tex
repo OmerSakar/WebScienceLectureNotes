@@ -157,7 +157,12 @@ When $x < y$, x has a \underline{higher} reservation price than y.
 \begin{defi}
 	r(x): reservation price where $0 < x < 1$.
 \end{defi}
-//TODO picture
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{./images/graph_res_price.png}
+	\captionof{figure}{Reservation price}    
+\end{figure}
 
 \begin{defi}
 	p: market price. $p \geq r(0)$ means nobody buys it and $p \leq r(1)$ means everybody buys it.
@@ -198,7 +203,13 @@ $x < x' \implies r(x) > r(x') \implies r(x)\cdot f(z) > r(x')\cdot f(z) > p^{*} 
 \noindent Customer z has lowest intrinsic value $r(z)$ on $[0,z]$.
 
 \noindent If $p^{*} = f(z)\cdot r(z) \implies$ self-fulfilling expectation.
-\\//TODO picture\\
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{./images/graph_self_fulfilling.png}
+	\captionof{figure}{Reservation Price}    
+\end{figure}
+
 
 \noindent Suppose $p^{*} = f(z)\cdot r(x)$ for some x $\implies$ fraction x will but $\implies$ actual value for x is $f(x)\cdot r(x)$. $x < y \implies f(x)\cdot r(x) < p^{*} \implies$ x paid too much!
 
@@ -210,13 +221,28 @@ $f(0) = 0 \implies p^{*} = r(0)\cdot f(0) = 0$, in other words equilibrium.
 
 
 
-\newpage
 \noindent Example: $r(x) = 1 - x^{2},\ f(z) = z^{2}$\\
-$p^{*} = r(z) = (1-z^{2})\cdot z^{2}$\\
+$p^{*} = r(z) = (1-z^{2})\cdot z^{2}$
 
 \noindent $p^{*} > \frac{3}{16} \implies$ no solution\\
 $p^{*} < \frac{3}{16} \implies r(z)\cdot f(z)$ has 2 solutions.
-\\//TODO 3 pictures\\
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{./images/graph_tipping_point.png}
+	\captionof{figure}{$p^{*}$}    
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}[h]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{./images/graph_r.png}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[h]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{./images/graph_f.png}
+  \end{minipage}
+\end{figure}
 
 \noindent We will look at different cases:
 \begin{enumerate}
