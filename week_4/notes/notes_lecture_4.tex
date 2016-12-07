@@ -211,19 +211,53 @@ Number of nodes at distance 2: $d^{2}$\\
 Number of nodes at distance k: $d^{k} \leftarrow last generation$\\
 
 \noindent $1 + d + d^{2} + \cdots + d^{k} = n$\\
-$\frac{d^{k+1}-1}{d-1} \approx c\cdot d^{k} = n$ where $k = log(n) - c$
+$\frac{d^{k+1}-1}{d-1} \approx c\cdot d^{k} = n$ where $k = log(n) - c$\newline\newline\newline
 
+\subsection{The role of Hubs}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.35\textwidth]{./images/fig8.jpg} 
+\end{figure}
 
+\begin{itemize}
+\item Many short routes through the hubs
+\item Friendship Paradox
+\end{itemize}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.35\textwidth]{./images/fig9.jpg} 
+\end{figure}
+\noindent$P(d_ {w} = k = \frac{k\cdot P_ {k}}{\sum_{l=1}^{w} l\cdot P_{l}} = \frac{k\cdot P_{l}}{avg.\ Degree}$\\
+$P_{k} = c\cdot k^{-\gamma - 1 }$ - fraction of nodes with degree k.\\
+$E(d_{w}) = \sum\limits_{k=1}^\infty k\cdot k\cdot P_{k} = \frac{1}{avg.\ Degree}\cdot \sum\limits_{k=1}^\infty k^{2}\cdot c\cdot k^{-\gamma - 1} = \infty\ if\ \gamma \in (1,2)$\\
+$d(U_{1}, U_{2}) = O(log\ log\ n)$\\
 
+\noindent Decentralized-Search\\
+Migran's experiment
 
+\subsection{Spatial Graph}
+$x = (x_ {1}, x_{2}),\ y = (y_{1},y_{2})$\\
+$P(x \gets \to y) = (d(x,y))^{-q}$
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.35\textwidth]{./images/fig10.jpg} 
+\end{figure}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.35\textwidth]{./images/fig11.jpg} 
+\end{figure}
 
+\noindent The distances are short of $q=2$, the number of nodes on distance $(d,2d)$ from x is $\sim d^{2}$\\
+$[\pi\cdot (2d)^{2} - \pi\cdot d^{2}] = c\cdot d^{2}$\\
+$q>2,\ P(x \gets \to y) = d^{-q}$\\
+\underline{Number of neighbours on distance} $(d,2d) \approx c\cdot d^{2}\cdot d^{-q}$\\
+$q>2$, $c\cdot d^{2-q}$. If d increases, $d^{2-q}$ decreases.
 
-
-
-
+\subsection{Some additional notes from the tutorial}
+$density\ =\ \frac{\#\ of\ neighbours\ in\ cluster}{\#\ of\ neighbours}$
 
 
 
