@@ -1,0 +1,53 @@
+\documentclass[12pt]{scrartcl}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+
+
+\title{Lecture Notes week 5}
+\author{\"Omer \c Sakar}
+\date{\today}
+
+\newtheorem{defi}{Definition}
+\newtheorem{theo}{Theorem}
+
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Lecture 1}
+%Walter Kern%
+Example: Coordination Game\\
+40\% upscaled and 60\% low-priced.\\
+Competitor $= 4 \cdot you$.\\
+
+\noindent American Footbal Game\\
+\noindent $P_{2}(p,run) = p\cdot 0 + (1-p)\cdot(-10) = 10p - 10$\\
+$P_{2}(p,pass) = p\cdot (-5) + (1-p)\cdot 0 = -5p$\\
+
+
+\noindent If $p > \frac{2}{3} \implies 10p - 10 > -5p \implies 2^{nd}$ player: run.\\ 
+If $p < \frac{2}{3} \implies 10p - 10 < -5p \implies 2^{nd}$ player: pass.\\
+
+\noindent $P_{1}(p,q) = \sum\limits_{i} p_{i}(S_{i})\cdot \sum\limits_{j} q_{j}\cdot P_{1}(S_{i}, S_{j})$\\
+$P_{1}(S_{i}, q) = \sum\limits_{j} q_{j}\cdot P_{1}(S_{i}, S_{j})$\\
+$P_{1}(p,q) = P_{1}(S_{i}, q)\ \forall S_{i}$\\
+$\implies 1\cdot P_{1}p,q \geq \sum\limits_{i} p'_{i}\cdot P_{1}(S_{i}.q) = P_{1}(p',q)$
+
+
+
+
+\clearpage
+\section{Lecture 2} 
+
+
+
+
+
+
+\end{document}
