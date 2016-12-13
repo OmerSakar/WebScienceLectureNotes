@@ -40,10 +40,22 @@ $P_{1}(p,q) = P_{1}(S_{i}, q)\ \forall S_{i}$\\
 $\implies 1\cdot P_{1}p,q \geq \sum\limits_{i} p'_{i}\cdot P_{1}(S_{i}.q) = P_{1}(p',q)$
 
 
-
-
 \clearpage
 \section{Lecture 2} 
+Questions from slides\\
+Answer Question 1:\\
+STUB\\
+Answer Question 2:\\
+Yes, for network routing games there is always a \textbf{pure} Nash equilibrium.\\
+
+\noindent Player $i$ switches from $P_{i}$to $P_{i}'$.\\
+He saves $\sum\limits_{l\in P_{i}\backslash P_{i}'} l_{e}(n_{e}(z))$.\\
+He pays: $\sum\limits_{l\in P_{i}'\backslash P_{i}} l_{e}(n_{e}(z) +1)$
+The sum of these are $< 0 \implies$ potential change.\\
+
+1) $p(Z) = \sum\limits_{e} l_{e}(1) + \cdots + l_{e}(n_{e}) \leq \sum\limits_{e} n_{e}\cdot l_{e}(n_{e}) = tc(Z)$\\
+2)$P(Z) = \sum\limits_{e} (a_{e}\cdot 1 + b_{e}) + \cdots + (a_{e}\cdot n_{e} + b_{e}) = \sum\limits_{e} a_{e} \frac{n_{e}\cdot (n_{e}+1)}{2} + n_{e}\cdot b_{e}\geq \sum\limits_{e} \frac{1}{2} n_{e}\cdot (n_{e}\cdot a_{e} + b_{e}) = \frac{1}{2} \sum\limits_{e} n_{e}\cdot l_{e}(n_{e}) = \frac{1}{2}\cdot tc(Z)$, where $l_{e}(n_{e}) = (n_{e}\cdot a_{e} + b_{e})$\\
+
 
 
 
